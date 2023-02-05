@@ -1,0 +1,14 @@
+name = "d1-test"
+main = "src/index.ts"
+compatibility_date = "2023-01-22"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.graphql"]
+fallthrough = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "d1-test"
+database_id = "522de2c6-fea7-48f3-a3a4-074c438c6677"
+preview_database_id = "522de2c6-fea7-48f3-a3a4-074c438c6677"

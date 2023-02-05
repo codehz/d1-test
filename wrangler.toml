@@ -1,6 +1,7 @@
 name = "d1-test"
 main = "src/index.ts"
 compatibility_date = "2023-01-22"
+usage_model = "bundled"
 
 [[rules]]
 type = "Text"

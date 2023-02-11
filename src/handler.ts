@@ -1,8 +1,8 @@
-import { makeExecutableSchema } from "@graphql-tools/schema";
+import { makeExecutableSchema, mergeSchemas } from "@graphql-tools/schema";
 import {
   BuiltinDefinitions,
   generateResolver,
-  generateRootTypes,
+  generateRootTypeDefs,
   fixupResult,
   cacheAllSQLMapperInfo,
 } from "@qlite/core";
@@ -17,9 +17,12 @@ const processed: DocumentNode = {
   definitions: [...BuiltinDefinitions.definitions, ...parsed.definitions],
 };
 const schema = buildASTSchema(processed);
-const [extended, typedefs] = generateRootTypes(schema);
-cacheAllSQLMapperInfo(extended);
-const resolver = generateResolver<Env>(extended, {
+const typedefs = generateRootTypeDefs(schema);
+const merged = mergeSchemas({
+  schemas: [schema],
+  typeDefs: [typedefs],
+});
+const resolver = generateResolver<Env>(merged, {
   async all(ctx, sql, parameters) {
     try {
       const stmt = ctx.DB.prepare(sql).bind(...parameters);
@@ -82,7 +85,7 @@ const resolver = generateResolver<Env>(extended, {
   },
 });
 const executable = makeExecutableSchema({
-  typeDefs: [extended, typedefs],
+  typeDefs: [merged],
   resolvers: [resolver],
 });
 

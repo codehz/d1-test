@@ -9,7 +9,7 @@
   "dependencies": {
     "@graphql-tools/schema": "^9.0.15",
     "@graphql-yoga/render-graphiql": "^3.5.1",
-    "@qlite/core": "^0.0.8",
+    "@qlite/core": "^0.0.10",
     "graphql": "^16.6.0",
     "graphql-yoga": "^3.5.1"
   },

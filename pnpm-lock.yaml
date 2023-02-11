@@ -5,7 +5,7 @@ specifiers:
   '@graphql-tools/schema': ^9.0.15
   '@graphql-yoga/render-graphiql': ^3.5.1
   '@qlite/cli': ^0.0.8
-  '@qlite/core': ^0.0.8
+  '@qlite/core': ^0.0.10
   '@types/node': ^18.11.19
   graphql: ^16.6.0
   graphql-yoga: ^3.5.1
@@ -15,7 +15,7 @@ specifiers:
 dependencies:
   '@graphql-tools/schema': 9.0.15_graphql@16.6.0
   '@graphql-yoga/render-graphiql': 3.5.1_graphql-yoga@3.5.1
-  '@qlite/core': 0.0.8
+  '@qlite/core': 0.0.10
   graphql: 16.6.0
   graphql-yoga: 3.5.1_fpwzejcmfqpdneobdih363qpvq
 
@@ -415,11 +415,19 @@ packages:
       - supports-color
     dev: true
 
+  /@qlite/core/0.0.10:
+    resolution: {integrity: sha512-lqGzKRtcgVU6HwGb/4W5OqHf+72lkjrUvTc1ZCCTuJazhIfghXwXCihVFgOr2d9PMBxp0IlY0N/AhmkttVyCtA==}
+    dependencies:
+      '@graphql-tools/utils': 9.1.4_graphql@16.6.0
+      graphql: 16.6.0
+    dev: false
+
   /@qlite/core/0.0.8:
     resolution: {integrity: sha512-4L7tw4d2ifvMo28GdVD8LxMCHJ8Pgbiz/gEgqiz9N0FUzJyzzCarO/8kDtiT1MsMeWpXSkLRJBcyVyAOIlBQ7g==}
     dependencies:
       '@graphql-tools/utils': 9.1.4_graphql@16.6.0
       graphql: 16.6.0
+    dev: true
 
   /@repeaterjs/repeater/3.0.4:
     resolution: {integrity: sha512-AW8PKd6iX3vAZ0vA43nOUOnbq/X5ihgU+mSXXqunMkeQADGiqw/PY0JNeYtD5sr0PAy51YPgAPbDoeapv9r8WA==}
@@ -1019,7 +1027,7 @@ packages:
       '@envelop/validation-cache': 5.1.0_a6sekiasy2tqr6d5gj7n2wtjli
       '@graphql-tools/executor': 0.0.12_graphql@16.6.0
       '@graphql-tools/schema': 9.0.15_graphql@16.6.0
-      '@graphql-tools/utils': 9.2.0_graphql@16.6.0
+      '@graphql-tools/utils': 9.1.4_graphql@16.6.0
       '@graphql-yoga/subscription': 3.1.0
       '@whatwg-node/fetch': 0.6.2
       '@whatwg-node/server': 0.5.8_@types+node@18.11.19

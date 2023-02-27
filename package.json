@@ -7,17 +7,19 @@
     "deploy": "wrangler publish"
   },
   "dependencies": {
-    "@graphql-tools/schema": "^9.0.15",
-    "@graphql-yoga/render-graphiql": "^3.5.1",
-    "@qlite/core": "^0.0.10",
+    "@graphql-tools/schema": "^9.0.16",
+    "@graphql-yoga/render-graphiql": "^3.7.0",
+    "@qlite/core": "^0.1.0",
     "graphql": "^16.6.0",
-    "graphql-yoga": "^3.5.1"
+    "graphql-yoga": "^3.7.0",
+    "yaml": "^2.2.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20221111.1",
-    "@qlite/cli": "^0.0.8",
-    "@types/node": "^18.11.19",
-    "typescript": "^4.9.4",
-    "wrangler": "2.1.15"
+    "@cloudflare/workers-types": "^4.20230221.0",
+    "@miniflare/tre": "3.0.0-next.1",
+    "@qlite/cli": "^0.1.0",
+    "@types/node": "^18.14.2",
+    "typescript": "^4.9.5",
+    "wrangler": "2.11.1"
   }
 }

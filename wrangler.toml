@@ -5,7 +5,7 @@ usage_model = "bundled"
 
 [[rules]]
 type = "Text"
-globs = ["**/*.graphql"]
+globs = ["**/*.yaml"]
 fallthrough = true
 
 [[d1_databases]]
@@ -13,3 +13,4 @@ binding = "DB"
 database_name = "d1-test"
 database_id = "522de2c6-fea7-48f3-a3a4-074c438c6677"
 preview_database_id = "522de2c6-fea7-48f3-a3a4-074c438c6677"
+procedures = "src/procedures.ts"

@@ -1,0 +1,39 @@
+tables:
+  books:
+    columns:
+      id: {type: integer, primary_key: true}
+      title: {type: text, not_null: true}
+      url: {type: text}
+      created_at: {type: timestamp}
+    relations:
+      authors:
+        type: array
+        remote_table: book_author_maps
+        mappings:
+          id: book_id
+  book_author_maps:
+    columns:
+      book_id: {type: integer, primary_key: true}
+      author_id: {type: integer, primary_key: true}
+    relations:
+      book:
+        type: object
+        remote_table: books
+        mappings:
+          book_id: id
+      author:
+        type: object
+        remote_table: authors
+        mappings:
+          author_id: id
+  authors:
+    columns:
+      id: {type: integer, primary_key: true}
+      name: {type: text, not_null: true}
+      created_at: {type: timestamp}
+    relations:
+      books:
+        type: array
+        remote_table: book_author_maps
+        mappings:
+          id: author_id
